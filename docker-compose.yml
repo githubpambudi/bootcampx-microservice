@@ -1,6 +1,14 @@
 version: "3"
 
 services:
+
+  djangoapp:
+    build: ./djangoapp
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./djangoapp:/djangoapp
+
   flaskapp:
     build: ./flaskapp
     volumes:
