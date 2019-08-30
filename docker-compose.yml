@@ -2,7 +2,7 @@ version: "3"
 
 services:
   flaskapp:
-    build: ""
+    build: ./flaskapp
     volumes:
       - .:/code
     ports:
