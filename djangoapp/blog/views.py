@@ -21,3 +21,9 @@ def single_category(request, pk):
     queryset = Category.objects.get(pk=pk)
     serialized = CategorySerializer(queryset)
     return Response(serialized.data)
+
+from rest_framework import viewsets
+
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
