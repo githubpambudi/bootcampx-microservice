@@ -14,7 +14,7 @@ ROOT_DRF = f"http://{DRF_HOST}:{DRF_PORT}"
 
 @app.route('/')
 def index():
-    categories = requests.get(f'{ROOT_DRF}/api/categories/')
+    categories = requests.get(f'{ROOT_DRF}/api/v2/categories/')
     categories = categories.json()
 
     return render_template('index.html', categories=categories)
