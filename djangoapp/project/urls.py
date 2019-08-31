@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-
 from blog.views import hello_world
+from blog.views import categories
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', hello_world),
+    path('api/v1/categories/', categories),
 ]
