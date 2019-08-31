@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 
 from blog.views import hello_world
-from blog.views import categories
+from blog.views import categories, single_category
 
 urlpatterns = [
     path('admin/', admin.site.urls),
