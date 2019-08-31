@@ -11,6 +11,7 @@ from .models import Category
 def hello_world(request):
     return Response({"message": "hello world"})
 
+@api_view(["GET"])
 def categories(request):
     queryset = Category.objects.all()
     serialized = CategorySerializer(queryset, many=True)
