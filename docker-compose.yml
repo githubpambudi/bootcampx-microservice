@@ -26,5 +26,6 @@ flaskapp:
     volumes:
       - ./flask_app:/code
     environment:
+      - FLASK_ENV=development
       - DRF_HOST=djangoapp
       - DRF_PORT=5000

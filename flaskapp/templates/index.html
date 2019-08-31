@@ -46,6 +46,17 @@
     </div>
   </section>
 
+<ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href={{ url_for('index') }}>News</a>
+          </li>
+          {% for item in categories %}
+          <li class="nav-item">
+            <a class="nav-link" href={{ url_for('categories', id=item['id']) }}>{{ item['title'] }}</a>
+          </li>
+          {% endfor %}
+</ul>
+
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
@@ -58,16 +69,6 @@
   <script href="{{ url_for('static',filename='vendor/jquery/jquery.min.js')}}"></script>
   <script src="{{ url_for('static',filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
-    <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href={{ url_for('index') }}>News</a>
-              </li>
-              {% for item in categories %}
-              <li class="nav-item">
-                <a class="nav-link" href={{ url_for('categories', id=item['id']) }}>{{ item['title'] }}</a>
-              </li>
-              {% endfor %}
-    </ul>
 </body>
 
 </html>
