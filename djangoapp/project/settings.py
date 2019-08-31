@@ -26,9 +26,9 @@ SECRET_KEY = 'k%2d5zxmqv7$ckek61j5bjp*0=ozg@!h(d&s9e25aag8izpzz^'
 DEBUG = True
 
 ALLOWED_HOSTS = ['167.71.216.38' , '0.0.0.0']
-                allowed_host_append = os.getenv("ALLOWED_HOSTS_PUSH")
-                if allowed_host_append:
-                    ALLOWED_HOSTS.append(allowed_host_append)
+allowed_host_append = os.getenv("ALLOWED_HOSTS_PUSH")
+if allowed_host_append:
+        ALLOWED_HOSTS.append(allowed_host_append)
 
 # Application definition
 
