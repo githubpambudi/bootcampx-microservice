@@ -31,9 +31,10 @@
         <ul class="navbar-nav ml-auto">
           {% for item in menu %}
           <li class="nav-item">
-            <a class="nav-link" href="#">{{item}}</a>
+            <a class="nav-link" href="#">{{item['title']}}</a>
           </li>
           {% endfor %}
+        </ul>
       </div>
     </div>
   </nav>
