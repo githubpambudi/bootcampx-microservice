@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
 from blog.serializers import CategorySerializer
-from .models import Category
+from .models import Category, News
 
 
 @api_view(["GET"])
@@ -31,3 +31,12 @@ def single_category(request, pk):
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+
+class CNewsSerializer(object):
+    pass
+
+
+class NewsViewSet(viewsets.ModelViewSet):
+    queryset = News.objects.all()
+    serializer_class = CNewsSerializer
