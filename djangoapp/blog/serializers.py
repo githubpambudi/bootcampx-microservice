@@ -13,3 +13,7 @@ class NewsSerializer(serializers.ModelSerializer):
     class Meta:
         model = News
         fields = '__all__'
+
+    def get_f_thumbnail(self, obj):
+        if obj.f_thumbnail:
+            return obj.f_thumbnail.url
