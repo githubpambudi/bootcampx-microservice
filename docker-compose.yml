@@ -9,15 +9,15 @@ services:
     volumes:
       - ./djangoapp:/djangoapp
 
-  flaskapp:
-    build: ./flaskapp
-    volumes:
-      - .:/code
-    ports:
-      - "4000:4000"
-    environment:
-      - FLASK_ENV=development
-    restart: always
+  #flaskapp:
+  #  build: ./flaskapp
+  #  volumes:
+  #    - .:/code
+  #  ports:
+  #    - "4000:4000"
+  #  environment:
+  #    - FLASK_ENV=development
+  #  restart: always
 
 flaskapp:
     build: ./flask_app
