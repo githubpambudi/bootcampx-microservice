@@ -22,11 +22,11 @@ services:
   #  restart: always
 
   flaskapp:
-      build: ./flask_app
+      build: ./flaskapp
       expose:
         - "5000"
       volumes:
-        - ./flask_app:/code
+        - ./flaskapp:/code
       environment:
         - FLASK_ENV=development
         - DRF_HOST=djangoapp
