@@ -18,6 +18,7 @@ from django.urls import path, include
 
 from blog.views import categories, single_category
 from blog.views import hello_world
+from project import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
