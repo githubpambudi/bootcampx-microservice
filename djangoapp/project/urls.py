@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', hello_world),
     path('api/v1/categories/', categories),
+    path('api/v1/categories/<pk>', single_category),
 ]

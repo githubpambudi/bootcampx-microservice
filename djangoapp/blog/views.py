@@ -16,3 +16,8 @@ def categories(request):
     queryset = Category.objects.all()
     serialized = CategorySerializer(queryset, many=True)
     return Response(serialized.data)
+@api_view(["GET"])
+def single_category(request, pk):
+    queryset = Category.objects.get(pk=pk)
+    serialized = CategorySerializer(queryset)
+    return Response(serialized.data)
