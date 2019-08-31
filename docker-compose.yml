@@ -8,6 +8,8 @@ services:
       - "5000:5000"
     volumes:
       - ./djangoapp:/djangoapp
+    environment:
+      - ALLOWED_HOSTS_PUSH=djangoapp
 
   #flaskapp:
   #  build: ./flaskapp
