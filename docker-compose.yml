@@ -21,13 +21,13 @@ services:
   #    - FLASK_ENV=development
   #  restart: always
 
-flaskapp:
-    build: ./flask_app
-    expose:
-      - "5000"
-    volumes:
-      - ./flask_app:/code
-    environment:
-      - FLASK_ENV=development
-      - DRF_HOST=djangoapp
-      - DRF_PORT=5000
+  flaskapp:
+      build: ./flask_app
+      expose:
+        - "5000"
+      volumes:
+        - ./flask_app:/code
+      environment:
+        - FLASK_ENV=development
+        - DRF_HOST=djangoapp
+        - DRF_PORT=5000
